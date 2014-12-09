@@ -1,16 +1,11 @@
 package com.jayway.template.boot;
 
 import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.server.nio.SelectChannelConnector;
 import org.eclipse.jetty.webapp.WebAppContext;
 
 public class RunJetty {
     public static void main(String[] args) throws Exception {
-        Server server = new Server();
-        SelectChannelConnector connector = new SelectChannelConnector();
-        connector.setPort(8080);
-
-        server.addConnector(connector);
+        Server server = new Server(8080);
 
         WebAppContext context = new WebAppContext();
         context.setResourceBase("src/main/webapp");
