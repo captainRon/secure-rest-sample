@@ -14,7 +14,7 @@ import org.springframework.security.web.authentication.Http403ForbiddenEntryPoin
 @Configuration
 @ComponentScan("com.jayway.template")
 @ImportResource("classpath:applicationContext-security.xml")
-@PropertySource("web-default.properties")
+@PropertySource("classpath:web-default.properties")
 public class WebConfig {
 	static {
 		LogInitializer.initializeJavaUtilLoggingBridge();
